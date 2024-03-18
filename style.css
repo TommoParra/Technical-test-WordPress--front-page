@@ -1,0 +1,84 @@
+/*
+Theme Name: ByteBerry
+Author: Tomas M. Parra
+Author URI: https://github.com/TommoParra
+Description: Prueba técnica para Byteberry!
+Version: 1.0
+*/
+
+@charset "UTF-8";
+
+/* Root variables */
+:root {
+
+  /* Colors */
+  --primary: #5C0E46;
+  --secondary: #FA3B61;
+
+  /* Spaces */
+  --standardPadding: 83px;
+
+}
+
+/* MEDIA QUERIES */
+
+
+/* min-width:  =360px */
+@media screen and (min-width: 360px) {
+  :root {
+  }
+}
+
+/* min-width:  =576px */
+@media screen and (min-width: 576px) {
+  :root {
+  }
+}
+
+/* min-width:  =768px */
+@media screen and (min-width: 768px) {
+  :root {
+  }
+}
+
+
+/* min-width:  =992px */
+@media screen and (min-width: 992px) {
+  :root {
+  }
+}
+
+/* min-width:  =1200px */
+@media  screen and (min-width: 1200px) {
+  :root {
+  }
+}
+
+/* min-width:  =1440px */
+@media  screen and (min-width: 1440px) {
+  :root {
+
+  }
+}
+
+/* Typography */
+
+@font-face {
+  font-family: 'Bw Gradual Demo';
+  src: url('fonts/BwGradualDEMO-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* HEADER */
+
+.header {
+  padding: var(--standardPadding);
+}
+
+
+/* logo */
+.logo {
+  color: var(--secondary)
+}

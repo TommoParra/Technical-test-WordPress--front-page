@@ -1,8 +1,14 @@
 <?php get_header(); ?>
 <main>
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close-modal">&times;</span>
+            <div id="videoContainer"></div>
+        </div>
+    </div>
     <section class="hero">
-        <div id="flower-animation-container"></div>
 
+        <div id="flower-animation-container"></div>
         <div class="padding-wrapper">
             <div class="content-wrapper">
                 <h1 class="title">
@@ -17,10 +23,11 @@
                 <div class="hero-video">
                     <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/featured_fp.jpg' ); ?>"
                         alt="Video thumbnail">
-                    <button>
+                    <button id="playVideo">
                         <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/play.png' ); ?>"
                             alt="Play icon">
                     </button>
+
                 </div>
             </div>
         </div>

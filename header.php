@@ -16,7 +16,7 @@
         <!-- Load your custom script -->
         <script src="<?php echo get_template_directory_uri(); ?>/js/flower-animation.js"></script>
 
-
+        <script src="<?php echo get_template_directory_uri(); ?>/js/script.js"></script>
 
         <?php wp_head(); ?>
     </head>

@@ -20,6 +20,7 @@ Version: 1.0
   --CreamyWhite: #F2EBE2;
   --textColor: #695C5C;
   --lightText: #ABA0A8;
+  --grey: #F4F4F4;
 
   /* Spaces */
   --standardSpacing: 15px;
@@ -78,6 +79,7 @@ Version: 1.0
   src: url('fonts/BwGradualDEMO-Regular.otf') format('opentype');
 }
 
+
 /* Thin */
 @font-face {
     font-family: 'Bw Gradual Demo Thin';
@@ -90,15 +92,24 @@ Version: 1.0
 @font-face {
     font-family: 'Bw Gradual Demo Thin Italic';
     src: url('fonts/BwGradualDEMO-ThinItalic.otf') format('opentype');
-    font-weight: thin;
+    font-weight: 100;
     font-style: italic;
 }
+
+/* Light */
+@font-face {
+    font-family: 'Bw Gradual Demo Light';
+    src: url('path/to/BwGradualDEMO-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
 
 /* Bold */
 @font-face {
     font-family: 'Bw Gradual Demo Bold';
     src: url('fonts/BwGradualDEMO-Bold.otf') format('opentype');
-    font-weight: bold;
+    font-weight: 600;
     font-style: normal;
 }
 
@@ -106,7 +117,7 @@ Version: 1.0
 @font-face {
     font-family: 'Bw Gradual Demo Extra Bold';
     src: url('fonts/BwGradualDEMO-ExtraBold.otf') format('opentype');
-    font-weight: 800; /* Use the appropriate font weight value */
+    font-weight: 900; /* Use the appropriate font weight value */
     font-style: normal;
 }
 
@@ -135,6 +146,9 @@ Version: 1.0
 .font-thin {
     font-family: 'Bw Gradual Demo Thin';
 }
+.font-light {
+    font-family: 'Bw Gradual Demo Light';
+}
 .font-thin-italic {
     font-family: 'Bw Gradual Demo Thin Italic', sans-serif;
 }
@@ -153,12 +167,13 @@ button, a {
 }
 
 /* sections */
-.full-height-section {
-    height: 100vh;
-}
 
+.grey-section {
+    background-color: var(--grey);
+}
 .section-title {
     color: var(--primary);
+    
 }
 .section-text {
     display: grid;
@@ -172,13 +187,16 @@ button, a {
     line-height: 2.625rem;
 }
 .small-text {
+    font-family: "Poppins", sans-serif;
     font-size: 1rem;
+    line-height: 1.7rem;
 }
 .light-text {
     color: var(--lightText);
 }
 
 .centered-content {
+    position: relative;
     display: flex;
     justify-content: space-between;
     gap: 30px;
@@ -187,6 +205,25 @@ button, a {
     margin: auto 0;
 }
 
+
+/* Buttons */
+
+.btn {
+    border-radius: 30px;
+    background-color: var(--secondary);
+    font-size: .875rem;
+    line-height: 1.5rem;
+    color: var(--grey);
+    width: 330px;
+    height: min-content;
+    padding: 15px 0;
+}
+
+/* Home */
+
+.home-sec-2 {
+    padding: 400px 0 320px 0;
+}
 
 .home-sec-2 .section-title {
     width: 50%;
@@ -197,6 +234,84 @@ button, a {
     grid-row-gap: 30px;
     width: 50%;
 }
+
+
+.home-sec-3 {
+    padding: 140px 0 150px 0;
+}
+
+.home-sec-3 .section-text .section-title {
+    font-size: 3.75rem;
+    line-height: 4.125rem;
+    margin-bottom: 20px;
+}
+
+
+.home-sec-3 .section-text {
+    width: 60%;
+    grid-row-gap: 30px;
+}
+
+.home-sec-3 .section-text .light-text {
+    margin-bottom: 20px;
+}
+
+.home-sec-3 .sec-image-showcase {
+    width: 30%;
+    max-height: 600px;
+    position: relative;
+}
+
+.home-sec-3 .sec-image-showcase img {
+    position: absolute;
+    height: 20px;
+    width: auto;
+    bottom: 0;
+    z-index: 1;
+}
+.home-sec-3 .sec-image-showcase .circle {
+    position: absolute;
+    left: 50%;
+    top: 6%;
+    transform: translate(-50%);
+    width: 222px;
+    height: 222px;
+    border-radius: 50%;
+    background-color: white;
+    
+}
+.home-sec-3 .sec-image-showcase img:nth-child(1) {
+    transform: rotate(40deg);
+    height: 100px;
+    top: 0;
+    right: 15%;
+}
+.home-sec-3 .sec-image-showcase img:nth-child(2) {
+    height: 145px;
+    top: 14%;
+    left: -7%;
+}
+
+.home-sec-3 .sec-image-showcase img:nth-child(3) {
+    height: 160px;
+    top: 29%;
+    right: 5%;
+}
+
+.home-sec-3 .sec-image-showcase img:nth-child(4) {
+    height: 200px;
+    bottom: 21%;
+    left: -15%;
+}
+
+.home-sec-3 .sec-image-showcase img:nth-child(5) {
+    height: 220px;
+    bottom: -9%;
+    right: 20%;
+}
+
+
+
 
 /* HEADER */
 
@@ -250,13 +365,14 @@ button, a {
     grid-auto-rows: min-content;
     max-height:  900px;
     background-color: var(--primary);
-    & .bg {
-        z-index: 0;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 98%;
-    }
+    & #flower-animation-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; 
+}
     & h1 {
         z-index: 1;
         color: var(--CreamyWhite);
@@ -307,4 +423,11 @@ button, a {
     height: 350px;
     width: auto;
     z-index: -1;
+}
+
+/* Footer */
+
+.footer {
+    background-color: var(--primary);
+    height: 150px;
 }

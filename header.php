@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
     <head>
         <meta charset="utf-8">
         <meta name="keywords" content="">
@@ -15,14 +16,18 @@
     </head>
 
     <body>
-        
+
         <header class="header">
             <a href="" class="logo">LOGO</a>
+
             <nav>
-    <ul>
-      <li><a href="#">Company</a></li>
-      <li><a href="#">Products</a></li>
-      <li><a href="#">About Us</a></li>
-    </ul>
-  </nav>
+                <?php
+                wp_nav_menu(array(
+                    'theme_location' => 'header_navbar',
+                    'menu_class' => 'header-menu', 
+                ));
+            ?>
+
+            </nav>
+
         </header>

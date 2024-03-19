@@ -12,17 +12,14 @@
         <div class="padding-wrapper">
             <div class="content-wrapper">
                 <h1 class="title">
-                    <span class="font-medium">Netus ullmac</span>
-                    <br>
-                    <span class="font-thin-italic">elementum dolor</span>
-                    <br>
-                    <span class="font-medium">Adipiscing aenean</span>
-                    <br>
-                    <span class="font-extraBold">egestas</span>
+                    <?php the_field('hero_title'); ?>
                 </h1>
                 <div class="hero-video">
-                    <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/featured_fp.jpg' ); ?>"
-                        alt="Video thumbnail">
+                    <?php
+                    $hero_video_preview = get_field('hero_video_preview');
+                    ?>
+                    <img src="<?php echo $hero_video_preview['url']; ?>"
+                        alt="<?php echo $hero_video_preview['alt']; ?>">
                     <button id="playVideo">
                         <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/play.png' ); ?>"
                             alt="Play icon">
@@ -40,22 +37,16 @@
                     <img class="light-stain"
                         src="<?php echo esc_url( get_template_directory_uri() . '/assets/mancha.png' ); ?>" alt="">
                     <h2 class="section-title">
-                        <span class="font-thin">Laculis mi</span>
-                        <br>
-                        <span class="font-bold">hendrerit</span>
-                        <br>
-                        <span class="font-thin">velit manas</span>
-                        <br>
-                        <span class="font-bold">volutpat</span>
+                        <?php the_field('section_2_title'); ?>
                     </h2>
 
                     <div class="section-text">
-                        <p class="big-text">Consectetur adipiscing elit. Netus ullamc orper sed erat iaculis nisi.
-                            Iaculis
-                            mi libero in non
-                            justo, dui quis amet euismod ac at hendrerit ut elementum dolor.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit netus ac at hendrerit ut elementum
-                            dolor integer eget nisl volutpa.</p>
+                        <p class="big-text">
+                            <?php the_field('section_2_big_text'); ?>
+                        </p>
+                        <p>
+                            <?php the_field('section_2_small_text'); ?>
+                        </p>
                     </div>
                 </article>
             </div>
@@ -79,18 +70,18 @@
                         <div class="circle"></div>
                     </div>
                     <div class="section-text">
-                        <h2 class="section-title"><span class="font-medium">Netus ullamc</span> <span
-                                class="font-thin">Nature</span>
-                            <br>
-                            dolor integer <span class="font-bold">volutpat</span>
+                        <h2 class="section-title">
+                            <?php the_field('section_3_title'); ?>
                         </h2>
-                        <p>Consectetur adipiscing elit. Netus ullamc orper sed erat iaculis nisi. Iaculis mi libero in
-                            non justo, dui quis amet euismod ac at hendrerit ut elementum dolor Iaculis mi libero in non
-                            justo, dui quis amet euismod ac at hendrerit ut.</p>
-                        <p class="small-text light-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit Netus
-                            ullamc orper sed erat iaculis nisi. Iaculis mi libero in non justo, dui quis amet euismod.
-                            Ac at hendrerit ut elementum dolor integer eget nisl volutpat.</p>
-                        <button class="btn">Netus ullmac</button>
+                        <p>
+                            <?php the_field('section_3_big_text'); ?>
+                        </p>
+                        <p class="small-text light-text">
+                            <?php the_field('section_3_small_text'); ?>
+                        </p>
+                        <button class="btn">
+                            <?php the_field('section_3_button_text'); ?>
+                        </button>
                     </div>
                 </article>
             </div>

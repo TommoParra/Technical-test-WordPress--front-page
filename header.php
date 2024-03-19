@@ -10,6 +10,12 @@
 
         <title>Prueba ByteBerry</title>
 
+        <!-- Load Lottie library -->
+        <script src="https://cdn.jsdelivr.net/npm/lottie-web@latest"></script>
+
+        <!-- Load your custom script -->
+        <script src="<?php echo get_template_directory_uri(); ?>/js/flower-animation.js"></script>
+
 
 
         <?php wp_head(); ?>

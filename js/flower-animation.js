@@ -3,9 +3,17 @@ document.addEventListener('DOMContentLoaded', function () {
     var animationData = {
         container: animationContainer,
         renderer: 'svg',
-        loop: true,
-        autoplay: true,
-        path: '<?php echo get_template_directory_uri(); ?>/assets/flor.json' // Corrected path to flor.json
+        autoplay: false, // Set autoplay to false to prevent automatic animation
+        path: 'wp-content/themes/byteberry/js/flor.json'
     };
-    lottie.loadAnimation(animationData);
+    
+    var anim = lottie.loadAnimation(animationData); // Load animation
+    
+    // Play only the initial segment
+    anim.playSegments([0, 20], true);
+
+    // Listen for animation complete event
+    anim.addEventListener('complete', function() {
+        // Animation has completed drawing, do something if needed
+    });
 });
